@@ -40,24 +40,31 @@ p
 
 a 
 	font-family: "PT Sans Caption", sans-serif
-	font-weight: 700	
-
-
-	
-.ishome
+	font-weight: 700
 
 // sf-menu
+.main-head 
 .main-head__nav
-	background-color: $main-color
-	
-
-.sf-menu__item
-	
-
-
-.sf-menu__item
-	
-
-.sf-menu__link,
-.sub-menu__item
-	color: $accent-color
+	background-color: $accent-color
+	text-align: center
+	border-bottom: 1px solid lighten($main-color, 30%)
+	.sf-menu
+		margin: auto
+		float: none
+		display: inline-block
+		font-family: "PT_Sans", sans-serif
+		font-size: em(15px)
+		.sf-menu__item
+			display: inline-block
+			background-color: transparent
+			border-left: 1px solid lighten($main-color, 30%)
+			&:first-child
+				border: none
+			&:hover
+				background-color: $main-color			
+			.sf-menu__link
+				color: $main-color
+				padding: 25px 34px 20px
+				&:hover
+					color: $accent-color
+	> 	.sf-menu__item
