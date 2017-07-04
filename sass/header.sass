@@ -44,12 +44,13 @@ a
 
 // sf-menu
 .main-head 
+	box-shadow: 0 0 5px lighten($main-color, 30%)
 .main-head__nav
 	background-color: $accent-color
 	text-align: center
 	border-bottom: 1px solid lighten($main-color, 30%)
 	.sf-menu
-		margin: auto
+		margin: 0 auto -8px
 		float: none
 		display: inline-block
 		font-family: "PT_Sans", sans-serif
@@ -62,24 +63,26 @@ a
 				border: none						
 			&:hover
 				background-color: $main-color
-				color: $accent-color
 			.sf-menu__link
 				display: inline-block
 				color: $main-color
-				padding: 25px 34px 20px
+				padding: 30px 34px 30px
 				&:hover
 					color: $accent-color
+					background-color: $main-color
 				.fa
 					margin-left: 8px
 					
 		.sub-menu__item
 			background-color: $accent-color
-			border: 1px solid lighten($main-color, 30%)
+			border-bottom: 1px solid lighten($main-color, 30%)
+			box-shadow: 0 0 8px lighten($main-color, 15%)
 			.sub-menu__link
+				background-color: $accent-color
 				color: $main-color
 				text-align: left
 				padding: 25px				
 				&:hover
 					background-color: $main-color
 					color: $accent-color
-			
+				

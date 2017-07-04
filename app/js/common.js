@@ -1,9 +1,6 @@
 $(function() {
 
-	$(".main-head__nav .sf-menu").superfish({
-		cssArrows: true,
-		hoverClass: ''
-	});
+	$(".main-head__nav .sf-menu > sf-menu__link").superfish();
 
 	//SVG Fallback
 	if(!Modernizr.svg) {
