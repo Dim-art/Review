@@ -49,16 +49,6 @@ a
 	text-align: center
 	border-bottom: 1px solid lighten($main-color, 30%)
 	.sf-menu
-		.sub-menu__item
-			background-color: $accent-color
-			border: 1px solid lighten($main-color, 30%)
-			.sub-menu__link
-				color: $main-color
-				text-align: left
-				padding: 25px				
-				&:hover
-					background-color: $main-color
-					color: $accent-color
 		margin: auto
 		float: none
 		display: inline-block
@@ -72,6 +62,7 @@ a
 				border: none						
 			&:hover
 				background-color: $main-color
+				color: $accent-color
 			.sf-menu__link
 				display: inline-block
 				color: $main-color
@@ -80,4 +71,15 @@ a
 					color: $accent-color
 				.fa
 					margin-left: 8px
+					
+		.sub-menu__item
+			background-color: $accent-color
+			border: 1px solid lighten($main-color, 30%)
+			.sub-menu__link
+				color: $main-color
+				text-align: left
+				padding: 25px				
+				&:hover
+					background-color: $main-color
+					color: $accent-color
 			
