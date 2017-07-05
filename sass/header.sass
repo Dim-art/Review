@@ -76,19 +76,30 @@ a
 					background-color: $main-color
 				.fa
 						margin-left: 8px
-	// sub-menu					
-	.sub-menu
-		&__item
-			background-color: $accent-color
-			border-bottom: 1px solid lighten($main-color, 30%)
-			box-shadow: 0 0 8px lighten($main-color, 15%)			
-		&__link
-			background-color: $accent-color
-			color: $main-color
-			text-align: left
-			padding: 25px							
-			&:hover
-				background-color: $main-color
-				color: $accent-color
+			// sub-menu					
+			.sub-menu
+				&__item
+					background-color: $accent-color
+					border-bottom: 1px solid lighten($main-color, 30%)
+					box-shadow: 0 0 8px lighten($main-color, 15%)			
+				&__link
+					background-color: $accent-color
+					color: $main-color
+					text-align: left
+					padding: 25px							
+					&:hover
+						background-color: $main-color
+						color: $accent-color
 
-// logo
+	// logo
+	&__logo
+
+		.logo
+			&__title
+				font-family: "Marck_Script", sans-serif
+				font-size: em(150px)
+				font-weight: 400
+			&__caption
+				font-family: "PT_Sans_Narrow", sans-serif
+				font-size: em(20px)
+		
