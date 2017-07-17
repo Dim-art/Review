@@ -2,6 +2,21 @@ $(function() {
 
 	$(".main-head__nav .sf-menu > sf-menu__link").superfish();
 
+	var owl = $(".owl-carousel");
+	owl.owlCarousel({
+		loop: true,		
+		items: 1,
+		nav: true
+	});
+
+	$(".next").click(function(){
+		owl.trigger("next.owl.carousel")
+	});
+
+	$(".prev").click(function(){
+		owl.trigger("prev.owl.carousel")
+	});
+
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {
