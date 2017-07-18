@@ -115,14 +115,28 @@ button
 	
 // slider
 
-
+.slider-wrap	
+	.nav-wrap
+		position: relative
+		.owl-nav
+			color: darken($accent-color, 5%)
+			font-size: 32px
+			position: absolute
+			width: 100%
+			z-index: 2			
+			&__arrow
+				cursor: pointer
+				position: absolute	
+				top: 110px			
+				&:last-child
+					right: 0
 .slider
 	&__title
 		position: relative
 		margin: 30px auto 30px
 		width: 750px
-		padding-top: 30px
-		padding-bottom: 30px
+		padding-top: 10px
+		padding-bottom: 50px
 
 				
 		// short-lines
@@ -134,14 +148,13 @@ button
 			height: 3px
 			background: lighten($accent-color, 40%)
 			display: block
-			margin: 0 auto
+			margin: 20px auto
 			left: 50%
 			margin-left: -15px			
 		&::before
 			top: 0
 		&::after
 			bottom: 0
-
 // service
 .service
 	position: relative
