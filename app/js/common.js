@@ -4,18 +4,29 @@ $(function() {
 
 	var owl = $(".owl-carousel");
 	owl.owlCarousel({
-		loop: true,		
+		loop: true,
+		autoplay: true,
+		autoplayTimeout: 5000,
+		autoplayHoverPause: true,
 		items: 1,
 		nav: true,
 		navText: ""
 	});
 
-	$(".next").click(function(){
+	 $(".next").click(function(){
 		owl.trigger("next.owl.carousel")
 	});
 
 	$(".prev").click(function(){
 		owl.trigger("prev.owl.carousel")
+	});
+
+	$(".play").on("click", function(){
+		owl.trigger("play.owl.autoplay",[5000])
+	});
+
+	$(".stop").on("click", function(){
+		owl.trigger("stop.owl.autoplay")
 	});
 
 	//SVG Fallback
