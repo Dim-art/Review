@@ -14,17 +14,31 @@
 	/**/
 	.main-head
 		.logo
-			margin-bottom: 20px
+			margin-bottom: 15px
 			&__title
-				font-size: em(120px)
+				font-size: em(100px)
 			&__caption
-				font-size: em(16px)
-				padding-top: 20px
+				font-size: em(14px)
+				padding-top: 30px
 				letter-spacing: 5px
+	
+	.slider-wrap
 		.slider__item
-			font-size: em(13px)
+			font-size: em(12px)
+			width: 95%
+			margin: auto
+			
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.slider-wrap
+		.slider
+			&__item
+				font-size: em(10px)
+				width: 70%
+				margin: auto
+			&__title
+				margin: 0
+		
 	
 	/*Disable Animation on Mobile Devices*/
 	.animated
