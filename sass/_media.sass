@@ -5,13 +5,24 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
-
+	.logo
+		&__title
+			font-size: em(160px)
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
-
-
+	.main-head
+		.logo
+			margin-bottom: 20px
+			&__title
+				font-size: em(120px)
+			&__caption
+				font-size: em(16px)
+				padding-top: 20px
+				letter-spacing: 5px
+		.slider__item
+			font-size: em(13px)
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	
