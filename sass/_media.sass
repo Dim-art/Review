@@ -5,6 +5,7 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
+	
 	.logo
 		&__title
 			font-size: em(160px)
@@ -24,27 +25,34 @@
 				padding-top: 30px
 				letter-spacing: 5px
 	
-	.slider-wrap
-		.slider__item
-			font-size: em(12px)
-			width: 95%
-			margin: auto
+		&__slider
+			.slider__item
+				font-size: em(12px)
+				width: 95%
+				margin: auto
 			
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.main-head
 		&__nav 
 			display: none
+
+		&__logo
+			margin-bottom: 50px
+			margin-top: 20px
+
+		&__mob
+			position: fixed
+			cursor: pointer
 		
-	.slider-wrap
-		.slider
-			&__item
-				font-size: em(10px)
-				width: 70%
-				margin: auto
-			&__title
-				margin: 0
-		
+		&__slider
+			// &__item
+			// 	font-size: em(10px)
+			// 	width: 70%
+			// 	margin: auto
+			// &__title
+			// 	margin: 0
+			display: none
 	
 	/*Disable Animation on Mobile Devices*/
 	.animated

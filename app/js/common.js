@@ -29,8 +29,9 @@ $(function() {
 		owl.trigger("stop.owl.autoplay")
 	});
 
-	$(".toggle-menu").click(function() {
-		$(this).toggleClass("on");
+	$(".main-menu__mob").click(function() {
+		var thiss = $(this).find(".toggle-menu");
+		thiss.toggleClass("on");
 		$(".main-menu").slideToggle();
 		return false;
 	});

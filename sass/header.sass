@@ -99,7 +99,6 @@ button
 		display: block
 		width: 28px
 		height: 28px
-		margin-top: 14px
 		background-color: $accent-color
 		color: $main-color
 
@@ -145,23 +144,22 @@ button
 			color: darken($accent-color, 10%)
 			padding: -20px
 	
-// slider
 
-.slider-wrap	
-	.nav-wrap
-		position: relative
-		.owl-nav
-			color: darken($accent-color, 5%)
-			font-size: 32px
-			position: absolute
-			width: 100%
-			z-index: 2			
-			&__arrow
-				cursor: pointer
-				position: absolute	
-				top: 110px			
-				&:last-child
-					right: 0
+	&__slider	
+		.nav-wrap
+			position: relative
+			.owl-nav
+				color: darken($accent-color, 5%)
+				font-size: 32px
+				position: absolute
+				width: 100%
+				z-index: 2			
+				&__arrow
+					cursor: pointer
+					position: absolute	
+					top: 110px			
+					&:last-child
+						right: 0
 .slider
 	&__title
 		position: relative
