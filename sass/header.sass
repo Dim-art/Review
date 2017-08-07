@@ -94,13 +94,23 @@ button
 						color: $accent-color
 
 	// mobile menu
-	&__mob		
+	&__mob
+		background-color: $accent-color
+		position: relative
+		width: 100%
 	.toggle-menu
 		display: block
-		width: 28px
+		width: 48px
 		height: 28px
 		background-color: $accent-color
 		color: $main-color
+		float: left
+		padding: 10px
+		&__item
+			
+			background-color: $accent-color
+			color: $main-color	
+			padding: 8px 50px
 
 		span:after, span:before 
 			content: ""
