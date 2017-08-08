@@ -31,8 +31,42 @@ body textarea:required:valid
 	color: #666
 
 //Custom Styles Here
-.main-head__mob
-	z-index: 4
+
+
+// service
+.service
+	position: relative
+	background-color: transparent
+	&__item
+		padding: 20px	
+		text-align: center
+		color: $font-color
+		font-size: 20px
+	&__image
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		&::before
+			content: ""
+			position: absolute
+			opacity: 0.7
+			background-color: $accent-color
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+	text-align: center	
+	&__item
+		display: inline-block
+		position: relative
+		z-index: 1
+		margin: 50px 30px
+		text-align: left
+		max-width: 300px
+		padding: 10px	
+		background-color: $main-color	
 
 //ALWAYS END
 @import "media"

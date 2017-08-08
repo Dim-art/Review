@@ -12,7 +12,7 @@ body
 
 h1
 	font-family: "Lobster", cursive
-	font-size: 160px
+	font-size: 60px
 	font-weight: 500
 
 h2
@@ -22,13 +22,14 @@ h2
 
 h3
 	font-family: "Roboto", sans-serif
-	letter-spacing: 9px	
+	font-size: 12px
+	letter-spacing: 2px	
 	font-weight: 600
 
 h4
-	font-size: 28px
+	font-size: 26px
 	font-weight: 500
-	letter-spacing: 5px	
+	letter-spacing: 4px	
 
 p	
 	font-weight: 400
@@ -100,18 +101,31 @@ button
 
 // header
 .main-head 
-	text-align: center
+	&__logo
+		float: left
+	// logo
+	.logo
+		display: inline-block
+		float: left
+		
+		&__title
+			color: $font-color
+			
+		// &__caption
+		// 	color: darken($main-color, 10%)
+		// 	padding: -20px
+	
 
 	// navbar
 	&__nav
-		background-color: $accent-color
+		background-color: $main-color
 		text-align: center
 		border: none
 
 		// sf-menu
 		.sf-menu
 			margin: 0 auto -8px
-			float: none
+			float: right
 			display: inline-block
 			font-family: "PT_Sans", sans-serif
 			font-size: 15px		
@@ -122,12 +136,12 @@ button
 					background-color: $accent-color
 			&__link
 				display: inline-block
-				color: $main-color
-				padding: 30px 34px 30px
+				color: $font-color
+				padding: 52px 34px 30px
 				border: none
 				&:hover
-					color: $accent-color
-					background-color: $main-color
+					color: $main-color
+					background-color: $accent-color
 				.fa
 						margin-left: 8px
 			// sub-menu					
@@ -142,26 +156,16 @@ button
 					padding: 25px							
 					&:hover
 						background-color: $main-color
-						color: $accent-color
+						color: $font-color
 
 		
-	// logo
-	.logo
-		margin: 0 auto
-		margin-bottom: 50px
-		&__title
-			color: $accent-color
-			margin-bottom: -85px
-		&__caption
-			color: darken($accent-color, 10%)
-			padding: -20px
-	
 	// slider
-	&__slider	
+	&__slider
+		text-align: center	
 		.nav-wrap
 			position: relative
 			.owl-nav
-				color: darken($accent-color, 5%)
+				color: darken($font-color, 5%)
 				font-size: 32px
 				position: absolute
 				width: 100%
@@ -197,33 +201,3 @@ button
 			top: 0
 		&::after
 			bottom: 0
-// service
-.service
-	position: relative
-	background-image: url(/img/books.jpg)
-	&__image
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		&::before
-			content: ""
-			position: absolute
-			opacity: 0.7
-			background-color: $accent-color
-			top: 0
-			left: 0
-			width: 100%
-			height: 100%
-.service-box
-	text-align: center	
-	&__item
-		display: inline-block
-		position: relative
-		z-index: 1
-		margin: 50px 30px
-		text-align: left
-		max-width: 300px
-		padding: 10px	
-		background-color: $main-color	
