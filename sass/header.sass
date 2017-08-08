@@ -46,6 +46,57 @@ button
 	border: 0
 	text-transform: uppercase
 	padding: 2px 0
+	
+// mobile menu
+.mob-menu
+	background-color: $accent-color
+	position: relative
+	width: 100%
+	text-align: center
+	&__item			
+		background-color: $accent-color
+		color: $main-color	
+		padding: 8px 50px
+
+	&__btn
+		display: block
+		width: 48px
+		height: 28px
+		background-color: $accent-color
+		color: $main-color
+		float: left
+		padding: 10px
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: $main-color
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)
 
 // header
 .main-head 
@@ -93,55 +144,6 @@ button
 						background-color: $main-color
 						color: $accent-color
 
-	// mobile menu
-.mob-menu
-	background-color: $accent-color
-	position: relative
-	width: 100%
-	&__btn
-		display: block
-		width: 48px
-		height: 28px
-		background-color: $accent-color
-		color: $main-color
-		float: left
-		padding: 10px
-
-	&__item			
-		background-color: $accent-color
-		color: $main-color	
-		padding: 8px 50px
-
-	span:after, span:before 
-		content: ""
-		position: absolute
-		left: 0
-		top: 9px
-
-	span:after
-		top: 18px
-
-	span 
-		position: relative
-		display: block
-
-	span, span:after, span:before
-		width: 100%
-		height: 2px
-		background-color: $main-color
-		transition: all 0.3s
-		backface-visibility: hidden
-		border-radius: 2px
-
-
-	&.on span 
-		background-color: transparent
-
-	&.on span:before 
-		transform: rotate(45deg) translate(-1px, 0px)
-
-	&.on span:after 
-		transform: rotate(-45deg) translate(6px, -7px)
 		
 	// logo
 	.logo
@@ -154,7 +156,7 @@ button
 			color: darken($accent-color, 10%)
 			padding: -20px
 	
-
+	// slider
 	&__slider	
 		.nav-wrap
 			position: relative

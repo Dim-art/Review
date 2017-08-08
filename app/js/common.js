@@ -48,7 +48,7 @@ $(function() {
 	$(".mob-menu").click(function() {
 		var mmAPI = $('#my-menu').data("mmenu");
 		mmAPI.open();
-		var thiss = $(this).find(".mo-menu__btn");
+		var thiss = $(this).find(".mob-menu__btn");
 		thiss.toggleClass("on");
 		$("main-menu").slideToggle();
 		return false;
