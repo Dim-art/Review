@@ -30,7 +30,9 @@ $(function() {
 	});
 
 	$(".sf-menu").after("<div id='my-menu'>");
-	$(".sf-menu").clone().appendTo('#my-menu');
+	$(".sf-menu").clone().appendTo('#my-menu');	
+	$("#my-menu").find("*").attr("style", "");
+	$("#my-menu").find("ul").removeClass("sf-menu");
 	$("#my-menu").mmenu({
 		extensions: [ 'theme-white', 'effect-menu-slide', 'pagedim-black'],
 		navbar: {
@@ -40,15 +42,15 @@ $(function() {
 
 	var api = $("#my-menu").data("mmenu");
 	api.bind("closed", function() {
-		$(".toggle-menu").removeClass("on");
+		$(".mob-menu").removeClass("on");
 	});
 
-	$(".main-head__mob").click(function() {
+	$(".mob-menu").click(function() {
 		var mmAPI = $('#my-menu').data("mmenu");
 		mmAPI.open();
-		var thiss = $(this).find(".toggle-menu");
+		var thiss = $(this).find(".mo-menu__btn");
 		thiss.toggleClass("on");
-		$(".main-head__mob").slideToggle();
+		$("main-menu").slideToggle();
 		return false;
 	});
 
