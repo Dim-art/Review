@@ -29,10 +29,26 @@ $(function() {
 		owl.trigger("stop.owl.autoplay")
 	});
 
-	$(".main-menu__mob").click(function() {
+	$(".sf-menu").after("<div id='my-menu'>");
+	$(".sf-menu").clone().appendTo('#my-menu');
+	$("#my-menu").mmenu({
+		extensions: [ 'theme-white', 'effect-menu-slide', 'pagedim-black'],
+		navbar: {
+			title: "МЕНЮ"
+		}
+	});
+
+	var api = $("#my-menu").data("mmenu");
+	api.bind("closed", function() {
+		$(".toggle-menu").removeClass("on");
+	});
+
+	$(".main-head__mob").click(function() {
+		var mmAPI = $('#my-menu').data("mmenu");
+		mmAPI.open();
 		var thiss = $(this).find(".toggle-menu");
 		thiss.toggleClass("on");
-		$(".main-menu").slideToggle();
+		$(".main-head__mob").slideToggle();
 		return false;
 	});
 
