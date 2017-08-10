@@ -5,7 +5,7 @@ $(function() {
 	var owl = $(".owl-carousel");
 	owl.owlCarousel({
 		loop: true,
-		autoplay: true,
+		autoplay: false,
 		autoplayTimeout: 5000,
 		autoplayHoverPause: true,
 		items: 1,
