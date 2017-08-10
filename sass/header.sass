@@ -112,11 +112,7 @@ button
 		&__title
 			color: $font-color
 			
-		// &__caption
-		// 	color: darken($main-color, 10%)
-		// 	padding: -20px
-	
-
+		
 	// navbar
 	&__nav
 		background-color: $main-color
@@ -166,15 +162,15 @@ button
 		.nav-wrap
 			position: relative
 			.owl-nav
-				color: lighten($font-color, 20%)
-				font-size: 32px
+				color: lighten($font-color, 10%)
+				font-size: 64px
 				position: absolute
 				width: 100%
 				z-index: 2			
 				&__arrow
 					cursor: pointer
 					position: absolute	
-					top: 150px			
+					top: 120px			
 					&:last-child
 						right: 0
 
@@ -198,7 +194,13 @@ button
 		&_top
 			padding-top: 130px
 		&_bottom
-			
+	&__link
+		text-align: left
+		color: $main-color
+		&_top
+			padding-top: 80px
+		&_btn
+			color: $accent-color
 	&__bg
 		position: absolute
 		top: 0
@@ -215,4 +217,4 @@ button
 			left: 0
 			width: 100%
 			height: 100%
-		
+
