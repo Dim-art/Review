@@ -8,7 +8,6 @@ $(function() {
 		autoplay: true,
 		autoplayTimeout: 5000,
 		autoplayHoverPause: true,
-		smartSpeed: 1000,
 		items: 1,
 		nav: true,
 		navText: ""
@@ -29,32 +28,6 @@ $(function() {
 	$(".stop").on("click", function(){
 		owl.trigger("stop.owl.autoplay")
 	});
-
-	$(".sf-menu").after("<div id='my-menu'>");
-	$(".sf-menu").clone().appendTo('#my-menu');	
-	$("#my-menu").find("*").attr("style", "");
-	$("#my-menu").find("ul").removeClass("sf-menu");
-	$("#my-menu").mmenu({
-		extensions: [ 'theme-white', 'effect-menu-slide', 'pagedim-black'],
-		navbar: {
-			title: "МЕНЮ"
-		}
-	});
-
-	var api = $("#my-menu").data("mmenu");
-	api.bind("closed", function() {
-		$(".mob-menu").removeClass("on");
-	});
-
-	$(".mob-menu").click(function() {
-		var mmAPI = $('#my-menu').data("mmenu");
-		mmAPI.open();
-		var thiss = $(this).find(".mob-menu__btn");
-		thiss.toggleClass("on");
-		$("main-menu").slideToggle();
-		return false;
-	});
-
 
 	//SVG Fallback
 	if(!Modernizr.svg) {
