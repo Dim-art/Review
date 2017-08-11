@@ -8,7 +8,7 @@ $(function() {
 		autoplay: true,
 		autoplayTimeout: 5000,
 		autoplayHoverPause: true,
-		smartSpeed: 1000,
+		autoplaySpeed: 2500,
 		items: 1,
 		nav: true,
 		navText: ""
