@@ -6,7 +6,7 @@ $(function() {
 	owl.owlCarousel({
 		loop: true,
 		autoplay: true,
-		autoplayTimeout: 5000,
+		autoplayTimeout: 10000,
 		autoplayHoverPause: true,
 		autoplaySpeed: 2500,
 		items: 1,
