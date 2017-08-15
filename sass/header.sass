@@ -50,6 +50,9 @@ button
 	text-transform: uppercase
 	padding: 5px 0
 
+.fa 
+	color: $accent-color	
+
 // mobile menu
 .mob-menu
 	background-color: $accent-color
@@ -140,8 +143,7 @@ button
 				&:hover
 					color: $main-color
 					background-color: $accent-color
-				.fa
-						margin-left: 8px
+				
 			// sub-menu					
 			.sub-menu
 				&__item
@@ -162,8 +164,7 @@ button
 		text-align: center
 		.nav-wrap
 			position: relative
-			.owl-nav
-				color: lighten($back-color, 10%)
+			.owl-nav				
 				font-size: 64px
 				position: absolute
 				width: 100%
@@ -171,7 +172,8 @@ button
 				&__arrow
 					cursor: pointer
 					position: absolute	
-					top: 120px			
+					top: 120px
+					opacity: 0.3			
 					&:last-child
 						right: 0
 
