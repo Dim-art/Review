@@ -58,14 +58,21 @@ body textarea:required:valid
 	background-color: $back-color
 	color: $main-color
 	padding: 30px
-
+	&__title
+		
 	.logo
+		&__title
+			opacity: 0.8
+			&:hover
+				opacity: 1
 		&__caption
 			font-size: 20px
 			color: $accent-color
+			opacity: 0.8
+			&:hover
+				opacity: 1
 
 	.info
-		&__title
 		&__icon
 			color: $accent-color
 			position: absolute
@@ -75,17 +82,17 @@ body textarea:required:valid
 		&__text
 			position: relative
 			padding: 0
-
+			opacity: 0.8
 	.menu
 		&__item
 			padding-top: 0
 			padding-bottom: 23px
 			position: relative
-		&__link
-			
+		&__link			
 			font-family: "PT Sans Narrow", sans-serif
 			font-weight: 400
 			text-transform: capitalize
+			opacity: 0.8
 			&:hover
 				color: $accent-color
 				
