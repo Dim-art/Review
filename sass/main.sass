@@ -68,16 +68,18 @@ body textarea:required:valid
 		&__title
 		&__icon
 			color: $accent-color
-			display: inline-block
-			padding: 20px 10px 
-			vertical-align: top
+			position: absolute
+			top: 4px
+			left: -30px
+			
 		&__text
-			display: inline-block
+			position: relative
+			padding: 0
 
 	.menu
 		&__item
-			padding-top: 15px
-			padding-bottom: 13px
+			padding-top: 0
+			padding-bottom: 23px
 			position: relative
 		&__link
 			
@@ -86,11 +88,11 @@ body textarea:required:valid
 			text-transform: capitalize
 			&:hover
 				color: $accent-color
-				text-decoration: underline
+				
 		&__icon
 			position: absolute
-			top: 20px
-			left: -18px
+			top: 4px
+			left: -19px
 			color: $accent-color
 			padding-right: 5px
 
