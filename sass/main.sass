@@ -78,11 +78,17 @@ body textarea:required:valid
 		&__item
 			padding-top: 15px
 			padding-bottom: 13px
-
+			display: block
 		&__link
 			font-family: "PT Sans Narrow", sans-serif
 			font-weight: 400
 			text-transform: capitalize
+			&:hover
+				color: $accent-color
+				text-decoration: underline
+		&__icon
+			color: $accent-color
+			padding-right: 5px
 
 //ALWAYS END
 @import "media"
