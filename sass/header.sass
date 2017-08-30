@@ -55,6 +55,7 @@ button
 
 .isnohome
 	.main-head
+		
 		&__nav
 			.logo
 				&__title
@@ -62,6 +63,33 @@ button
 			.sf-menu
 				&__link
 					padding: 23px 28px 20px
+	.content
+		position: relative
+		background-image: url(/img/lady-justice-f.jpg)
+		&__bg
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-size: cover
+			
+			&::before
+				position: absolute
+				content: ""
+				background-color: $back-color
+				opacity: 0.85
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+		&__title
+			color: lighten($accent-color, 50%)
+		&__text
+			color: $main-color
+			z-index: 4	
+
+
 	.footer
 		padding: 10px
 		&__logo
