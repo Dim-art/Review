@@ -65,7 +65,7 @@ button
 					padding: 23px 28px 20px
 	.content
 		position: relative
-		// background-image: url(/img/lady-justice-f.jpg)
+		
 		&__bg
 			position: absolute
 			top: 0
@@ -73,8 +73,7 @@ button
 			right: 0
 			bottom: 0
 			background-size: cover
-			z-index: -1
-			
+			z-index: -1			
 			&::before
 				position: absolute
 				content: ""
@@ -90,9 +89,27 @@ button
 			
 		&__text
 			padding-bottom: 50px
-			
 
-
+		.sidebar			
+			&__title
+				color: $accent-color
+			&__menu
+				padding-left: 20px
+				padding-top: 10px
+				padding-bottom: 15px
+				&:hover
+					color: $accent-color
+			&__item
+				padding-left: 20px
+				font-size: 12px	
+				line-height: 2
+				&:hover
+					color: $main-color
+			&__link
+				&:hover
+					color: inherit
+				
+					
 	.footer
 		padding: 10px
 		&__logo
