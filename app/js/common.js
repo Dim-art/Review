@@ -1,5 +1,6 @@
 $(function() {
 
+	$(".main-head__slider").slideDown();
 	$(".main-head__nav .sf-menu > sf-menu__link").superfish();
 
 	var owl = $(".owl-carousel");
@@ -14,7 +15,7 @@ $(function() {
 		navText: ""
 	});
 
-	 $(".next").click(function(){
+	$(".next").click(function(){
 		owl.trigger("next.owl.carousel")
 	});
 
