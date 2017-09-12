@@ -258,6 +258,7 @@ button
 					&_bottom
 						opacity: 1
 						left: 0
+
 				&__slogan
 					&_top,
 					&_bottom
@@ -273,14 +274,16 @@ button
 		&_top
 			left: -150px
 			opacity: 0
-			transition: all .5s ease
+			transition: all 1s ease 1s
+			transition-delay: 1s
 			color: $main-color
 			font-size: 86px	
 			margin-top: 60px		
 		&_bottom
 			left: 150px
 			opacity: 0
-			transition: all .10s ease
+			transition: all 1s ease-out
+			transition-delay: 1.5s
 			color: $main-color
 			margin: -90px
 
@@ -291,11 +294,13 @@ button
 			padding-top: 130px
 			top: -100px
 			opacity: 0
-			transition: all .5s ease
+			transition: all 1s ease-out 1s
+			transition-delay: 1s
 		&_bottom
 			top: 100px
 			opacity: 0
-			transition: all .5s ease
+			transition: all 1s ease-out
+			transition-delay: 1.5s
 
 	&__link
 		text-align: left

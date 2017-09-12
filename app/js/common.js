@@ -6,7 +6,7 @@ $(function() {
 	var owl = $(".slider");
 	owl.owlCarousel({
 		loop: true,
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 10000,
 		autoplayHoverPause: true,
 		autoplaySpeed: 2500,
