@@ -3,10 +3,10 @@ $(function() {
 	$(".main-head__slider").slideDown();
 	$(".main-head__nav .sf-menu > sf-menu__link").superfish();
 
-	var owl = $(".owl-carousel");
+	var owl = $(".slider");
 	owl.owlCarousel({
 		loop: true,
-		autoplay: true,
+		autoplay: false,
 		autoplayTimeout: 10000,
 		autoplayHoverPause: true,
 		autoplaySpeed: 2500,

@@ -249,7 +249,20 @@ button
 					&:last-child
 						right: 0
 
-.slider	
+.slider
+	.owl-item
+		&.active
+			.slider
+				&__title
+					&_top,
+					&_bottom
+						opacity: 1
+						left: 0
+				&__slogan
+					&_top,
+					&_bottom
+						opacity: 1
+						top: 0
 	&__item
 		height: 340px
 	&__title
@@ -258,17 +271,32 @@ button
 		padding-top: 10px
 		padding-bottom: 50px				
 		&_top
+			left: -150px
+			opacity: 0
+			transition: all .5s ease
 			color: $main-color
 			font-size: 86px	
 			margin-top: 60px		
 		&_bottom
+			left: 150px
+			opacity: 0
+			transition: all .10s ease
 			color: $main-color
 			margin: -90px
+
 	&__slogan
 		margin: 0
+		position: relative
 		&_top
 			padding-top: 130px
+			top: -100px
+			opacity: 0
+			transition: all .5s ease
 		&_bottom
+			top: 100px
+			opacity: 0
+			transition: all .5s ease
+
 	&__link
 		text-align: left
 		color: $main-color
