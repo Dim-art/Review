@@ -264,6 +264,14 @@ button
 					&_bottom
 						opacity: 1
 						top: 0
+				&__link
+					&_top,
+					&_phone
+						opacity: 1
+						right: 0
+					&_bottom
+						opacity: 1
+						bottom: 0
 	&__item
 		height: 340px
 	&__title
@@ -285,13 +293,13 @@ button
 			transition: all 1s ease-out
 			transition-delay: 1.5s
 			color: $main-color
-			margin: -90px
+			margin-top: -90px
 
 	&__slogan
 		margin: 0
 		position: relative
 		&_top
-			padding-top: 130px
+			margin-top: 130px
 			top: -100px
 			opacity: 0
 			transition: all 1s ease-out 1s
@@ -302,20 +310,30 @@ button
 			transition: all 1s ease-out
 			transition-delay: 1.5s
 
-	&__link
-		text-align: left
-		color: $main-color
+	&__link		
 		position: relative
 		&_top
-			padding-top: 40px
-			margin-bottom: 0
-		&_bottom
-			margin-top: 5px
-		&_phone
-			font-size: 36px
+			right: -150px
+			opacity: 0
+			transition: all 1s ease-out 1s 
+			transition-delay: 1s
 			padding-top: 60px
-		&_btn
+			margin-bottom: 0
+		&_phone
+			right: 150px
+			opacity: 0
+			transition: all 1.5s ease-out 2s
+			font-size: 36px
+			padding-top: 10px
 			color: $accent-color
+		&_bottom
+			margin-top: 10px
+			bottom: -150px
+			transition: all 2s ease
+			opacity: 0
+			transition-delay: 3s
+		&_btn
+			font-size: 25px
 	&__bg
 		position: absolute
 		top: 0
