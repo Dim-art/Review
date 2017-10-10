@@ -1,5 +1,14 @@
 /*==========  Desktop First Method  ==========*/
 
+@media only screen and (min-width : 1200px)
+	.service
+		&__title
+			font-size: 22px
+			height: 80px
+		&__list
+			height: 150px				
+		&__btn
+			padding-top: 30px
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
@@ -8,10 +17,18 @@
 		font-size: 12px
 		&__link
 			font-size: 13px
-	
+
 	.logo
 		&__title
 			font-size: 60px
+
+	.service
+		&__title
+			font-size: 22px
+		&__list
+			height: 230px				
+		&__btn
+			padding-top: 30px
 	
 
 /* Medium Devices, Desktops */
@@ -20,6 +37,7 @@
 	.main-head
 		&__nav
 			font-size: 14px
+
 		.logo
 			margin-left: 40%
 			&__title
@@ -34,6 +52,15 @@
 				font-size: 12px
 				width: 95%
 				margin: auto
+
+	.service
+		&__title
+			font-size: 20px
+		&__list 
+			height: 160px
+		&__btn
+			padding-top: 0 
+		
 			
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -45,8 +72,7 @@
 			margin-bottom: 10px
 			margin-top: 10px
 
-	.slider
-			
+	.slider			
 		&__title
 			&_top
 				font-size: 70px
@@ -60,7 +86,12 @@
 				margin-top: 15%
 		&__link
 			font-size: 28px
-	
+
+	.service 
+		&__title
+			font-size: 22px
+		&__list 
+			// height: 120px
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
