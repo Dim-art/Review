@@ -5,15 +5,16 @@
 
 	<meta charset="utf-8">
 
-	<title>ООО "Ревью"</title>
-	<meta name="description" content="ООО Ревью - юридические услуги">
+	<title>Заголовок</title>
+	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<meta property="og:title" content="ООО Ревью. Юридические и бухгалтерские услуги">
-	<meta property="og:type" content="Юридические услуги">
-	<meta property="og:url" content="http://rev.by">
+	<meta property="og:image" content="path/to/image.jpg">
+
+	<!--google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Marck+Script|PT+Sans+Narrow:100,200,300,400,500,700|PT+Sans:400,700|PT+Mono:500|PT+Sans+Caption:500,700|Roboto:300,400,500&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
@@ -47,7 +48,7 @@
 
 </head>
 
-<body class="ishome">
+<body class="isnohome">
 
 	<!-- mobile menu -->
 	<div class="mob-menu hidden-lg hidden-md hidden-sm">
@@ -106,7 +107,7 @@
 				
 				<!--sf-menu-->
 				<ul class="sf-menu">
-					<li class="sf-menu__item"><a href="#" class="sf-menu__link">главная</a></li>
+					<li class="sf-menu__item"><a href="/index.html" class="sf-menu__link">главная</a></li>
 					<li class="sf-menu__item">
 						<a class="sf-menu__link">услуги</a>
 						<ul class="sub-menu">
@@ -131,52 +132,129 @@
 			
 			</div>
 		
-		</nav>
+		</nav>		
+	
+	</header>
+	<!-- end of header -->
 
-    <!--contacts-->
+
     <section class="content">
 
             <div class="content__bg" style="background-image: url(/img/hammer+weight.jpg)"></div>
 
-            <div class="content__sidebar">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+            			<div class="content__sidebar">
 
                             <div class="sidebar">                            
                                 <h4 class="sidebar__title">Услуги:</h4>
                                 <ul class="sidebar__menu"><a class="sidebar__link">Юридические</a>
                                     <li class="sidebar__item"><a href="/lawyer-consult.html" class="sidebar__link">юридическая консультация</a></li>
                                     <li class="sidebar__item sidebar__item_low"><a href="/registration.html" class="sidebar__link">регистрация юридических лиц</a></li>
+									<li class="sidebar__item sidebar__item_low"><a href="/reorganisation.html" class="sidebar__link">реорганизация юридических лиц</a></li>
+									<li class="sidebar__item sidebar__item_low"><a href="/liquidation.html" class="sidebar__link">ликвидация юридических лиц</a></li>
                                     <li class="sidebar__item"><a href="/presentation.html" class="sidebar__link">представление интересов компании</a></li>
                                 </ul>
                                 <ul class="sidebar__menu"><a href="/account.html" class="sidebar__link sidebar__link_title">бухгалтерские</a></ul>
-                                <ul class="sidebar__menu"><a href="staff.html" class="sidebar__link sidebar__link_title">кадровое делопроизводство</a></ul>                     
+                                <ul class="sidebar__menu"><a href="/staff.html" class="sidebar__link sidebar__link_title">кадровое делопроизводство</a></ul>                     
                             </div>
 
                         </div>
+            		</div>
 
-                        <div class="col-md-offset-1 col-md-8">
+                    <div class="col-md-offset-1 col-md-8">
                             
-                            <h4 class="content__title">НАШИ КОНТАКТЫ:</h4>
                             
 
-                            
-                        </div>
                     </div>
                 </div>
             </div>
 
     </section>
-    
-    <!--footer-->
+
+	
+	<!--gosportals-->
+	<section class="portals">
+		<div class="container">
+			<div class="raw">
+				<div class="col-md-2">
+
+					<h3 class="portals__title">Государственные порталы:</h3>
+
+				</div>
+
+				<div class="col-md-offset-1 col-md-3 col-sm-4">
+
+					<div class="gover">
+						<a href="http://union.by/" class="gover__link"><img src="/img/portals/logo-03_ru.gif" alt="union.by" class="gover__img"></a>
+					</div>
+
+				</div>
+				
+				<div class="col-md-3 col-sm-4">
+
+					<div class="gover">
+						<a href="http://www.nalog.gov.by/ru/" class="gover__link"><img src="/img/portals/logo-04_ru.gif" alt="nalog.gov.by" class="gover__img"></a>
+					</div>
+
+				</div>
+
+				<div class="col-md-3 col-sm-4">
+
+					<div class="gover">
+						<a href="http://www.prokuratura.gov.by/ru/" class="gover__link"><img src="/img/portals/logo-09_ru.gif" alt="prokuratura.gov.by" class="gover__img"></a>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="raw">
+					<div class="col-md-3 col-sm-6 col-xs-12">
+
+					<div class="gover">
+						<a href="http://www.belarus.by/" class="gover__link"><img src="/img/Portals/minust.gif" alt="belarus.by" class="gover__img"></a>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-6 col-xs-12">
+
+					<div class="gover">
+						<a href="http://court.gov.by/" class="gover__link"><img src="/img/Portals/judge.gif" alt="court.gov.by" class="gover__img"></a>
+					</div>
+
+				</div>
+
+				<div class="col-md-3 col-sm-6 col-xs-12">
+
+					<div class="gover">
+						<a href="http://www.pravo.by/" class="gover__link"><img src="/img/Portals/pravo.by.png" alt="pravo.by" class="gover__img"></a>
+					</div>
+
+				</div>
+
+				<div class="col-md-3 col-sm-6 col-xs-12">
+
+					<div class="gover">
+						<a href="https://minsk.gov.by/ru/" class="gover__link"><img src="/img/Portals/ispolkom.jpg" alt="minsk.gov.by" class="gover__img"></a>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!--footer-->
 	<footer class="footer">
 
 		<div class="container">
 
 			<div class="row">
 
-				<div class="col-md-2 col-sm-12">
+				<div class="col-md-2">
 
 					<!--Logo  -->
 					<div class="footer__logo">
@@ -190,7 +268,7 @@
 				
 				</div>
 
-				<div class="col-md-3 col-md-offset-1 col-sm-4">
+				<div class="col-md-3 col-md-offset-1">
 
 					<!--info  -->
 					<div class="footer__info">
@@ -211,7 +289,7 @@
 
 				</div>
 
-				<div class="col-md-3 col-sm-4">
+				<div class="col-md-3">
 
 					<!--menu  -->
 					<div class="footer__menu">
@@ -219,8 +297,8 @@
 						<h3 class="footer__title">услуги компании:</h3>
 
 						<div class="menu">
-
 							<ul class="menu__list">
+
 								<li class="menu__item"><i class="menu__icon fa fa-check"></i><a href="/lawyer-consult.html" class="menu__link">Юридическая консультация</a></li>
 								<li class="menu__item"><a href="/registration.html" class="menu__link"><i class="menu__icon fa fa-check"></i>Регистрация юридических лиц</a></li>
 								<li class="menu__item"><a href="/reorganisation.html" class="menu__link"><i class="menu__icon fa fa-check"></i>Реорганизация юридических лиц</a></li>
@@ -236,7 +314,7 @@
 
 				</div>
 
-				<div class="col-md-3 col-sm-4">
+				<div class="col-md-3">
 
 					<div class="footer__contacts">
 
@@ -262,19 +340,6 @@
 
 		</div>
 
-		<!--license-->
-        
-		<div class="footer__license">
-
-			<p class="license">
-				Лицензия на право осуществления деятельности по оказанию юридических услуг № 02240/1136, выдана Министерством юстиции Республики Беларусь, действительна до 17.05.2016 года.
-			</p>
-			<p class="license">Свидетельство о государственной регистрации юридического лица 0041469</p>
-
-			<p class="license">УНП 191445879</p>
-
-		</div>
-                
 	</footer>
 
 	<div class="hidden"></div>
