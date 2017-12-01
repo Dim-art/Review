@@ -41,6 +41,16 @@ gulp.task('browser-sync', ['styles', 'scripts'], function () {
 	});
 });
 
+gulp.task('sass', function() {
+	return gulp.src('app/sass/**/*.sass')
+	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
+	.pipe(rename({suffix: '.min', prefix: ''}))
+	.pipe(autoprefixer(['last 15 versions']))
+	//.pipe(cleanCSS())
+	.pipe(browserSync.reload({stream: true}));
+});
+
+
 gulp.task('styles', function () {
 	return gulp.src('sass/*.sass')
 		.pipe(sass({
