@@ -58,17 +58,23 @@ gulp.task('watch', ['sass', 'js', 'browser-sync'], function () {
 	gulp.watch('app/*.html', browserSync.reload);
 });
 
-gulp.task('styles', function () {
-	return gulp.src('sass/*.sass')
-		.pipe(sass({
-			includePaths: require('node-bourbon').includePaths
-		}).on('error', sass.logError))
-		.pipe(rename({ suffix: '.min', prefix: '' }))
-		.pipe(autoprefixer({ browsers: ['last 15 versions'], cascade: false }))
-		.pipe(cleanCSS())
-		.pipe(gulp.dest('app/css'))
-		.pipe(browserSync.stream());
+gulp.task('imagemin', function() {
+	return gulp.src('app/img/**/*')
+	.pipe(cache(imagemin()))
+	.pipe(gulp.dest('dist/img')); 
 });
+
+// gulp.task('styles', function () {
+// 	return gulp.src('sass/*.sass')
+// 		.pipe(sass({
+// 			includePaths: require('node-bourbon').includePaths
+// 		}).on('error', sass.logError))
+// 		.pipe(rename({ suffix: '.min', prefix: '' }))
+// 		.pipe(autoprefixer({ browsers: ['last 15 versions'], cascade: false }))
+// 		.pipe(cleanCSS())
+// 		.pipe(gulp.dest('app/css'))
+// 		.pipe(browserSync.stream());
+// });
 
 gulp.task('scripts', function () {
 	return gulp.src([
