@@ -20,6 +20,17 @@ gulp.task('common-js', function(){
 	.pipe(gulp.dest('app/js'));
 });
 
+gulp.task('js', ['common-js'], function() {
+	return gulp.src([
+		'app/libs/jquery/dist/jquery.min.js',
+		'app/js/common.min.js',
+		])
+	.pipe(concat('scripts.min.js'))
+	.pipe(gulp.dest('app/js'))
+	.pipe(browserSync.reload({stream: true}));
+});
+
+
 
 gulp.task('browser-sync', ['styles', 'scripts'], function () {
 	browserSync.init({
