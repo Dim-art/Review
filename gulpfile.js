@@ -1,11 +1,25 @@
 var gulp = require('gulp'),
+	gutil = require('gulp-util'),
 	sass = require('gulp-sass'),
-	autoprefixer = require('gulp-autoprefixer'),
-	cleanCSS = require('gulp-clean-css'),
-	rename = require('gulp-rename'),
 	browserSync = require('browser-sync').create(),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify');
+	autoprefixer = require('gulp-autoprefixer'),
+	ftp = require('vinyl-ftp'),
+	notify = require('gulp-notify'),
+	cleanCSS = require('gulp-clean-css'),
+	rename = require('gulp-rename'),
+	rsync = require('gulp-rsync')
+
+gulp.task('common-js', function(){
+	return gulp.src([
+		'app/js/common.js',
+	])
+	.pipe(concat('common.min.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest('app/js'));
+});
+
 
 gulp.task('browser-sync', ['styles', 'scripts'], function () {
 	browserSync.init({
