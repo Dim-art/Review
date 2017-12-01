@@ -51,11 +51,11 @@ gulp.task('sass', function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('watch', function () {
-	gulp.watch('sass/*.sass', ['styles']);
-	gulp.watch('app/libs/**/*.js', ['scripts']);
-	gulp.watch('app/js/*.js').on("change", browserSync.reload);
-	gulp.watch('app/*.html').on('change', browserSync.reload);
+gulp.task('watch', ['sass', 'js', 'browser-sync'], function () {
+	gulp.watch('app/sass/**/*.sass', ['sass']);
+	gulp.watch(['app/libs/**/*.js', 'app/js/common.js'], ['js']);
+	//gulp.watch('app/js/*.js').on("change", browserSync.reload);
+	gulp.watch('app/*.html', browserSync.reload);
 });
 
 gulp.task('styles', function () {
