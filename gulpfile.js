@@ -47,9 +47,16 @@ gulp.task('sass', function() {
 	.pipe(rename({suffix: '.min', prefix: ''}))
 	.pipe(autoprefixer(['last 15 versions']))
 	//.pipe(cleanCSS())
+	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('watch', function () {
+	gulp.watch('sass/*.sass', ['styles']);
+	gulp.watch('app/libs/**/*.js', ['scripts']);
+	gulp.watch('app/js/*.js').on("change", browserSync.reload);
+	gulp.watch('app/*.html').on('change', browserSync.reload);
+});
 
 gulp.task('styles', function () {
 	return gulp.src('sass/*.sass')
@@ -79,11 +86,5 @@ gulp.task('scripts', function () {
 		.pipe(gulp.dest('./app/js/'));
 });
 
-gulp.task('watch', function () {
-	gulp.watch('sass/*.sass', ['styles']);
-	gulp.watch('app/libs/**/*.js', ['scripts']);
-	gulp.watch('app/js/*.js').on("change", browserSync.reload);
-	gulp.watch('app/*.html').on('change', browserSync.reload);
-});
 
 gulp.task('default', ['browser-sync', 'watch']);
