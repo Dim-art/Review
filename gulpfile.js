@@ -30,14 +30,14 @@ gulp.task('js', ['common-js'], function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
-
-
 gulp.task('browser-sync', ['styles', 'scripts'], function () {
 	browserSync.init({
 		server: {
 			baseDir: "./app"
 		},
-		notify: false
+		notify: false,
+		// tunnel: true,
+		// tunnel: "review", //Demo page: http://review.localtunnel.me
 	});
 });
 
