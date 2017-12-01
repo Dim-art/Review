@@ -64,6 +64,27 @@ gulp.task('imagemin', function() {
 	.pipe(gulp.dest('dist/img')); 
 });
 
+gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
+
+	var buildFiles = gulp.src([
+		'app/*.html',
+		'app/.htaccess',
+		]).pipe(gulp.dest('dist'));
+
+	var buildCss = gulp.src([
+		'app/css/main.min.css',
+		]).pipe(gulp.dest('dist/css'));
+
+	var buildJs = gulp.src([
+		'app/js/scripts.min.js',
+		]).pipe(gulp.dest('dist/js'));
+
+	var buildFonts = gulp.src([
+		'app/fonts/**/*',
+		]).pipe(gulp.dest('dist/fonts'));
+
+});
+
 // gulp.task('styles', function () {
 // 	return gulp.src('sass/*.sass')
 // 		.pipe(sass({
@@ -76,21 +97,21 @@ gulp.task('imagemin', function() {
 // 		.pipe(browserSync.stream());
 // });
 
-gulp.task('scripts', function () {
-	return gulp.src([
-		'./app/libs/modernizr/modernizr.js',
-		'./app/libs/jquery/jquery-1.11.2.min.js',
-		'./app/libs/waypoints/waypoints.min.js',
-		'./app/libs/animate/animate-css.js',
-		'./app/libs/plugins-scroll/plugins-scroll.js',
-		'./app/libs/superfish/dist/js/superfish.min.js',
-		'./app/libs/owl.carousel/dist/owl.carousel.min.js',
-		'./app/libs/jQuery.mmenu/dist/jQuery.mmenu.js'
-	])
-		.pipe(concat('libs.js'))
-		// .pipe(uglify()) //Minify libs.js
-		.pipe(gulp.dest('./app/js/'));
-});
+// gulp.task('scripts', function () {
+// 	return gulp.src([
+// 		'./app/libs/modernizr/modernizr.js',
+// 		'./app/libs/jquery/jquery-1.11.2.min.js',
+// 		'./app/libs/waypoints/waypoints.min.js',
+// 		'./app/libs/animate/animate-css.js',
+// 		'./app/libs/plugins-scroll/plugins-scroll.js',
+// 		'./app/libs/superfish/dist/js/superfish.min.js',
+// 		'./app/libs/owl.carousel/dist/owl.carousel.min.js',
+// 		'./app/libs/jQuery.mmenu/dist/jQuery.mmenu.js'
+// 	])
+// 		.pipe(concat('libs.js'))
+// 		// .pipe(uglify()) //Minify libs.js
+// 		.pipe(gulp.dest('./app/js/'));
+// });
 
 
 gulp.task('default', ['browser-sync', 'watch']);
